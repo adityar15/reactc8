@@ -1,30 +1,28 @@
+import GithubSearch from "./pages/GithubSearch"
+import GuestLayout from "./layouts/GuestLayout"
+import { Routes, Route } from "react-router-dom"
+import UserList from "./pages/UserList"
+import PostList from "./pages/PostList"
+import Post from "./pages/Post"
+import NotFound from "./pages/NotFound"
 
-// import Card from "./components/Card"
-// import Counter from "./components/Counter"
-import GithubSearch from "./components/GithubSearch"
-// import Paragraph from "./components/Paragraph"
-// import PostList from "./components/PostList"
-// import UserList from "./components/UserList"
-
-
-
+// http://localhost:5173
 
 function App() {
- 
+  
   return (
-    <>
-      {/* <Card title="Title" content="Content">
-        <Paragraph content="This is a paragraph 1"></Paragraph>
-        <Paragraph content="This is a paragraph 2"></Paragraph>
-      </Card> */}
-      {/* <Counter /> */}
-      {/* <UserList />
 
-      <PostList /> */}
+    <Routes>
+      <Route path="/" element={<GuestLayout />}>
+        <Route index element={<GithubSearch />}></Route>
+        <Route path="/users" element={<UserList />}></Route>
+        <Route path="/posts" element={<PostList />}></Route>
+        <Route path="/posts/:id" element={<Post />}></Route>
+        <Route path="*" element={<NotFound />} />
+      </Route>
+    </Routes>
+
     
-      <GithubSearch />
-
-    </>
   )
 }
 
