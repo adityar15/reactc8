@@ -24,14 +24,7 @@ function SearchInput() {
             return response.json()
         }).then((data) => {
 
-            // if (data?.message) {
-            //     alert("Username not found")
-            //     return
-            // }
-            // hydrateUserDetails(data)
-            // details of the user
-
-            setUserDetails(data)
+          setUserDetails(data)
 
         })
     }

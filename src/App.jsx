@@ -5,6 +5,7 @@ import UserList from "./pages/UserList"
 import PostList from "./pages/PostList"
 import Post from "./pages/Post"
 import NotFound from "./pages/NotFound"
+import Quiz from "./pages/Quiz"
 
 // http://localhost:5173
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="/users" element={<UserList />}></Route>
         <Route path="/posts" element={<PostList />}></Route>
         <Route path="/posts/:id" element={<Post />}></Route>
+        <Route path="/quiz" element={<Quiz />}></Route>
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

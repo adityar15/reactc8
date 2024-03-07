@@ -19,6 +19,9 @@ export default function GuestLayout() {
                 <li>
                     <Link to="/">Github Search</Link>
                 </li>
+                <li>
+                    <Link to="/quiz">Quiz</Link>
+                </li>
             </ul>
      </header>
 
