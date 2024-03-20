@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Heading component 1`] = `
+<h1
+  className="text-lg text-red-600"
+>
+  Adi
+</h1>
+`;
