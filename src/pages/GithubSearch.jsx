@@ -16,7 +16,7 @@ function SearchInput() {
     function searchUserDetailsOnGithub() {
 
         if (username == "") {
-            alert("Please enter your Github username")
+            // alert("Please enter your Github username")
             return
         }
 
