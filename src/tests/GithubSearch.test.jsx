@@ -16,7 +16,7 @@ import GithubSearchProvider from '../pages/GithubSearch';
 // }
 test('Github search component', () => {
 
-  const component = renderer.create(<GithubSearchProvider title="Adi" />);
+  const component = renderer.create(<GithubSearchProvider />);
   let tree = component.toJSON()
   console.log("to json", tree)
   expect(tree).toMatchSnapshot();

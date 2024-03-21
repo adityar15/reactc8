@@ -1,5 +1,13 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
+exports[`Checks for heading component and makes sure that it is displayed correctly 1`] = `
+<h1
+  className="text-lg text-red-600"
+>
+  Adi
+</h1>
+`;
+
 exports[`Heading component 1`] = `
 <h1
   className="text-lg text-red-600"

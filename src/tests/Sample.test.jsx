@@ -13,7 +13,7 @@ import { expect, test } from 'vitest'
 //   expect(result).not.toBeInstanceOf(Array)
 //   return result
 // }
-test('Heading component', () => {
+test('Checks for heading component and makes sure that it is displayed correctly', () => {
 
   const component = renderer.create(<Heading title="Adi" />);
   let tree = component.toJSON()
@@ -23,3 +23,4 @@ test('Heading component', () => {
 
   // If you need to test different states or props, you can add more test cases here.
 });
+
