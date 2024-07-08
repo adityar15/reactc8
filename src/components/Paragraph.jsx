@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function Paragraph({content}) {
+export default function Paragraph({children}) {
   return (
-    <p>{content}</p>
+    <p>{children}</p>
   )
 }

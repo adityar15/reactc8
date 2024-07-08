@@ -1,31 +1,13 @@
-import GithubSearch from "./pages/GithubSearch"
-import GuestLayout from "./layouts/GuestLayout"
-import { Routes, Route } from "react-router-dom"
-import UserList from "./pages/UserList"
-import PostList from "./pages/PostList"
-import Post from "./pages/Post"
-import NotFound from "./pages/NotFound"
-import Quiz from "./pages/Quiz"
+import React from 'react'
+// import Heading from './components/Heading'
+// import Paragraph from './components/Paragraph'
+import Counter from './components/Counter'
 
-// http://localhost:5173
 
-function App() {
-  
+export default function App() {
   return (
-
-    <Routes>
-      <Route path="/" element={<GuestLayout />}>
-        <Route index element={<GithubSearch />}></Route>
-        <Route path="/users" element={<UserList />}></Route>
-        <Route path="/posts" element={<PostList />}></Route>
-        <Route path="/posts/:id" element={<Post />}></Route>
-        <Route path="/quiz" element={<Quiz />}></Route>
-        <Route path="*" element={<NotFound />} />
-      </Route>
-    </Routes>
-
-    
+    <div>
+      <Counter />
+    </div>
   )
 }
-
-export default App

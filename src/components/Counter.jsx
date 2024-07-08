@@ -1,27 +1,28 @@
-import React, { useState } from 'react'
+import React, {useState} from 'react'
 
 export default function Counter() {
-  
-    /**
-     * count reactive state (reactive variable)
-     * setCount function to update the count
-     */
+
+//    let count = 0
     const [count, setCount] = useState(0)
 
-    function increment() {
-        setCount(count+1)
-    }
 
-    function decrement() {
-        setCount(count-1)
-    }
+  function increment(){
+    let number = count + 1
+    setCount(number)
+  }
 
-   
-    return (
-        <div className='flex items-center gap-2'>
-            <button className="px-4 py-2 rounded-md bg-green-500 text-white" onClick={decrement}>-</button>
-            <span>{count}</span>
-            <button className="px-4 py-2 rounded-md bg-red-500 text-white" onClick={increment} >+</button>
-        </div>
-    )
+  function decrement()
+  {
+    let number = count - 1
+    setCount(number)
+  }
+
+
+  return (
+    <div>
+        <button onClick={decrement}>-</button>
+        <span>{count}</span>
+        <button onClick={increment}>+</button>
+    </div>
+  )
 }
