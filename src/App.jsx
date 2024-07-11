@@ -1,13 +1,13 @@
 import React from 'react'
-// import Heading from './components/Heading'
-// import Paragraph from './components/Paragraph'
-import Counter from './components/Counter'
+
+
+import GithubSearch from './components/GithubSearch'
 
 
 export default function App() {
   return (
-    <div>
-      <Counter />
+    <div className='max-w-md mx-auto p-2'>
+      <GithubSearch />
     </div>
   )
 }

@@ -7,7 +7,7 @@ export default function Heading({ content }) {
 
     // html boundary starts
     return (
-        <h1>
+        <h1 className='text-lg text-gray-900'>
             {content}
         </h1>
     )
