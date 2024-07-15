@@ -1,11 +1,22 @@
-import React, { useState } from 'react'
+import React, { createContext, useContext, useState } from 'react'
 import Input from './Input'
 import Button from './Button'
 import Heading from './Heading'
 
 
+const GithubSearchContext = createContext({
+    user: null,
+    setUser: (userDetails) => {} 
+})
 
-function GithubDetails({ user }) {
+
+function GithubDetails() {
+
+    const {user} = useContext(GithubSearchContext)
+
+    if(!user)
+        return <></>
+
     return (
         user?.message ? <p className='text-red-500'>User not found</p> :
             <div className='my-10'>
@@ -36,10 +47,10 @@ function GithubDetails({ user }) {
 }
 
 
-export default function GithubSearch() {
+function GithubSearchInput() {
 
     const [username, setUsername] = useState("")
-    const [user, setUser] = useState(null)
+    const {setUser} = useContext(GithubSearchContext)
 
     function findUser() {
         fetch(`https://api.github.com/users/${username}`)
@@ -50,14 +61,26 @@ export default function GithubSearch() {
     }
 
     return (
-        <div>
-            <div className="flex items-center">
-                <Input type="search" onInput={(e) => setUsername(e.target.value)} className="flex-grow" placeholder="Enter your Github username" />
+        <div className="flex items-center">
+            <Input type="search" onInput={(e) => setUsername(e.target.value)} className="flex-grow" placeholder="Enter your Github username" />
 
-                <Button onClick={findUser}> Search </Button>
-            </div>
-
-            {user && <GithubDetails user={user} />}
+            <Button onClick={findUser}> Search </Button>
         </div>
+    )
+}
+
+export default function GithubSearch() {
+
+    
+    const [user, setUser] = useState(null)
+
+    return (
+        <GithubSearchContext.Provider value={{
+            user: user,
+            setUser: setUser
+        }}>
+            <GithubSearchInput />
+            <GithubDetails  />
+        </GithubSearchContext.Provider>
     )
 }
