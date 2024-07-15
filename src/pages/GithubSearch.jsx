@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState } from 'react'
-import Input from './Input'
-import Button from './Button'
-import Heading from './Heading'
+import Input from '../components/Input'
+import Button from '../components/Button'
+import Heading from '../components/Heading'
 
 
 const GithubSearchContext = createContext({

@@ -4,7 +4,7 @@ import { useContext, useState } from 'react'
 import { StarIcon } from '@heroicons/react/20/solid'
 import { Radio, RadioGroup } from '@headlessui/react'
 import { CurrencyDollarIcon, GlobeAmericasIcon } from '@heroicons/react/24/outline'
-import { CartContext } from './CartProvider'
+import { CartContext } from '../components/CartProvider'
 
 const product = {
     name: 'Basic Tee',
@@ -179,6 +179,8 @@ function Policy({ policies }) {
         </section>
     )
 }
+
+
 
 function AddToCartButton() {
     const {setQty} = useContext(CartContext)
