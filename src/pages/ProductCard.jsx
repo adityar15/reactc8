@@ -41,7 +41,7 @@ const product = {
         { name: 'Heather Grey', bgColor: 'bg-gray-400', selectedColor: 'ring-gray-400' },
     ],
     sizes: [
-        { name: 'XXS', inStock: true },
+        { name: 'XXS', inStock: false},
         { name: 'XS', inStock: true },
         { name: 'S', inStock: true },
         { name: 'M', inStock: true },
@@ -69,6 +69,7 @@ function classNames(...classes) {
 }
 
 function BreadCrumb({ product }) {
+    
     return (
         <nav aria-label="Breadcrumb" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <ol role="list" className="flex items-center space-x-4">
